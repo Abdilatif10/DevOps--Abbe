@@ -1,0 +1,11 @@
+name: test-environment
+on: 
+  workflow_dispatch:
+
+jobs:
+  print-my-variable:
+    runs-on: ubuntu-latest
+    environment: Test
+    steps:
+      - name: Print API URL
+        run: echo "${{ env.API_URL }}"
